@@ -1,4 +1,3 @@
-/* Base styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,22 +6,21 @@
   
   body {
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 13px;
+    font-size: 20px;
     background-color: hsl(214, 17%, 92%);
     padding: 2rem;
     display: flex;
     justify-content: center;
   }
   
-  main.testimonials-grid {
+  .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    max-width: 1200px;
-    width: 100%;
+    gap: 1.2rem;
+    width: 1300px;
+    height: 800px;
   }
   
-  /* Card base */
   .card {
     background-color: white;
     border-radius: 10px;
@@ -32,83 +30,74 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .card__header {
+  .header {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
   }
   
-  .card .avatar {
+  .card .pic {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(34, 32, 32, 0.5);
   }
   
   .card h2 {
     font-size: 0.9rem;
     font-weight: 600;
   }
-  
-  .card .status {
-    font-size: 0.75rem;
-    opacity: 0.6;
-  }
-  
+
   .card h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: 600;
   }
   
-  .card__quote {
-    opacity: 0.8;
-    line-height: 1.5;
+  .card-content {
+    font-size: 0.8rem;
+
   }
-  
-  /* Unique styles */
-  .card--purple {
+
+  .first-card {
     background-color: hsl(263, 55%, 52%);
     color: white;
     grid-column: span 2;
     position: relative;
   }
   
-  .card--purple .quote-bg {
+  .first-card .quote {
     position: absolute;
     top: 1rem;
     right: 2rem;
-    width: 100px;
+    width: 70px;
     z-index: 0;
     opacity: 0.4;
   }
   
-  .card--gray {
+  .second-card{
     background-color: hsl(217, 19%, 35%);
     color: white;
   }
   
-  .card--white {
+  .third-card {
     background-color: hsl(0, 0%, 100%);
     color: hsl(219, 29%, 14%);
   }
   
-  .card--dark {
+  .forth-card {
     background-color: hsl(219, 29%, 14%);
     color: white;
     grid-column: span 2;
+    
   }
-  
-  /* Responsive for mobile */
-  @media (max-width: 768px) {
-    main.testimonials-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .card--purple,
+  .large-card{
+    grid-row: 1/ span  2;
+    grid-column: 4;
+  }
+
     .card--dark {
       grid-column: span 1;
     }
-  }
   
